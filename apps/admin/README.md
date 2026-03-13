@@ -11,4 +11,4 @@ pnpm dev
 
 ## Deployment
 
-Deploys to `admin.inquivix.com` via Cloudflare Pages.
+Deploys to `admin.inquivix.work` via Cloudflare Pages.

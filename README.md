@@ -2,7 +2,7 @@
 
 This is the unified repository for all Inquivix applications:
 - **apps/web** - Public website (inquivix.com)
-- **apps/admin** - CMS & admin panel (admin.inquivix.com)
+- **apps/admin** - CMS & admin panel (admin.inquivix.work)
 - **apps/hub** - Internal operations platform (hub.inquivix.work)
 
 ## Quick Start
