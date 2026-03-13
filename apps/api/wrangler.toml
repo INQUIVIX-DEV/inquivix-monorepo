@@ -1,0 +1,25 @@
+name = "inquivix-api"
+main = "src/index.ts"
+compatibility_date = "2025-03-13"
+workers_dev = true
+
+[env.production]
+routes = [
+  { pattern = "api.inquivix.work/*", zone_name = "inquivix.work" }
+]
+
+[env.production.vars]
+SUPABASE_URL = "https://your-project.supabase.co"
+PAYLOAD_CMS_URL = "https://admin.inquivix.work"
+
+[env.development]
+vars = { ENVIRONMENT = "development" }
+
+[[env.production.kv_namespaces]]
+binding = "CACHE"
+id = "your-kv-namespace-id"
+preview_id = "your-kv-namespace-preview-id"
+
+[[env.production.r2_buckets]]
+binding = "R2"
+bucket_name = "inquivix-media"

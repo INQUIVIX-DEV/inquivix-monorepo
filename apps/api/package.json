@@ -1,0 +1,21 @@
+{
+  "name": "@inquivix/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --env production",
+    "preview": "wrangler preview",
+    "type-check": "tsc --noEmit"
+  },
+  "dependencies": {
+    "hono": "^4.0.0",
+    "@supabase/supabase-js": "^2.38.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240203.0",
+    "wrangler": "^3.28.0",
+    "typescript": "^5.3.3"
+  }
+}
