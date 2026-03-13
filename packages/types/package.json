@@ -1,0 +1,12 @@
+{
+  "name": "@inquivix/types",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Inquivix types package",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

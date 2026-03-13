@@ -1,0 +1,23 @@
+name: Deploy Hub
+
+on:
+  push:
+    branches: [hub]
+    paths:
+      - "apps/hub/**"
+      - "packages/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm --filter @inquivix/hub build
+      - name: Deploy to Cloudflare Pages
+        run: echo "Deploy to Cloudflare Pages (hub.inquivix.work)"

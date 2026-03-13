@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "baseUrl": ".",
+    "paths": {
+      "@inquivix/ui": ["packages/ui/src"],
+      "@inquivix/auth": ["packages/auth/src"],
+      "@inquivix/db": ["packages/db/src"],
+      "@inquivix/types": ["packages/types/src"],
+      "@inquivix/utils": ["packages/utils/src"],
+      "@inquivix/config": ["packages/config/src"],
+      "@inquivix/page-builder": ["packages/page-builder/src"]
+    }
+  }
+}

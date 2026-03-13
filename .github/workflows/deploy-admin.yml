@@ -1,0 +1,23 @@
+name: Deploy Admin
+
+on:
+  push:
+    branches: [admin]
+    paths:
+      - "apps/admin/**"
+      - "packages/**"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm --filter @inquivix/admin build
+      - name: Deploy to Cloudflare Pages
+        run: echo "Deploy to Cloudflare Pages (admin.inquivix.com)"
